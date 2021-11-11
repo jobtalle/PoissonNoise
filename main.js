@@ -46,6 +46,8 @@ import {Disk} from "./disk.js";
     window.onresize = () => {
         canvas.width = wrapper.clientWidth;
         canvas.height = wrapper.clientHeight;
+
+        generate();
     };
 
     generate();
