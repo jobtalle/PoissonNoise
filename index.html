@@ -11,6 +11,26 @@
 </div>
 <div id="controls">
     <button id="button-generate">Generate</button>
+    <label>
+        Attempts:
+        <input type="range" min="1" max="16" value="7" step="1" id="input-attempts">
+        <input readonly type="text" id="field-attempts" value="7">
+    </label>
+    <label>
+        Mutation:
+        <input type="range" min="0" max=".3" value=".1" step=".01" id="input-mutation">
+        <input readonly type="text" id="field-mutation" value=".1">
+    </label>
+    <label>
+        Min radius:
+        <input type="range" min="1" max="32" value="3" step="1" id="input-radius-min">
+        <input readonly type="text" id="field-radius-min" value="3">
+    </label>
+    <label>
+        Max radius:
+        <input type="range" min="1" max="32" value="7" step="1" id="input-radius-max">
+        <input readonly type="text" id="field-radius-max" value="7">
+    </label>
 </div>
 <script src="main.js" type="module"></script>
 </body>

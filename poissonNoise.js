@@ -12,19 +12,25 @@ export class PoissonNoise {
      * @param {number} height The noise height
      * @param {Disk[]} [initial] The initial disks
      * @param {number} [attempts] The number of growth attempts per disk
+     * @param {number} [mutation] The radius mutation rate
+     * @param {number} [radiusMin] The minimum radius
+     * @param {number} [radiusMax] The maximum radius
      */
     constructor(
         width,
         height,
         initial = [new Disk(width * .5, height * .5, 3)],
-        attempts = 7) {
+        attempts = 7,
+        mutation = .1,
+        radiusMin = 3,
+        radiusMax = 7) {
         this.width = width;
         this.height = height;
         this.disks = initial;
         this.attempts = attempts;
-        this.radiusMin = 3;
-        this.radiusMax = 7;
-        this.mutation = .1;
+        this.radiusMin = radiusMin;
+        this.radiusMax = radiusMax;
+        this.mutation = mutation;
 
         this.grow();
     }

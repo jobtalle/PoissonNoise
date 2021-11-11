@@ -2,7 +2,7 @@
  * Poisson noise renderer
  */
 export class PoissonNoiseRenderer {
-    static AMBIENT = .3;
+    static AMBIENT = .4;
 
     /**
      * Construct a poisson noise renderer
