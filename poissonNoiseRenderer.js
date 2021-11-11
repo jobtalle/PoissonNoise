@@ -2,7 +2,8 @@
  * Poisson noise renderer
  */
 export class PoissonNoiseRenderer {
-    static AMBIENT = .4;
+    static LIGHT_MIN = .4;
+    static LIGHT_MAX = .95;
 
     /**
      * Construct a poisson noise renderer
@@ -23,7 +24,7 @@ export class PoissonNoiseRenderer {
 
         for (const disk of noise.disks) {
             const brightness = 1 - (disk.radius - noise.radiusMin) / (noise.radiusMax - noise.radiusMin);
-            const lighting = PoissonNoiseRenderer.AMBIENT + (1 - PoissonNoiseRenderer.AMBIENT) * brightness;
+            const lighting = PoissonNoiseRenderer.LIGHT_MIN + (PoissonNoiseRenderer.LIGHT_MAX - PoissonNoiseRenderer.LIGHT_MIN) * brightness;
 
             context.fillStyle = "hsl(0,0%," + (100 * lighting) + "%)";
 
