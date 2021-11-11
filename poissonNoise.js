@@ -21,7 +21,7 @@ export class PoissonNoise {
         height,
         initial = [new Disk(width * .5, height * .5, 3)],
         attempts = 7,
-        mutation = .1,
+        mutation = .06,
         radiusMin = 3,
         radiusMax = 7) {
         this.width = width;
